@@ -227,11 +227,6 @@ export class RequestValidator {
           path: `.query.${q}`,
           message: `Unknown query parameter '${q}'`,
         };
-      } else if (!allowedEmpty?.has(q) && (query[q] === '' || null)) {
-        return {
-          path: `.query.${q}`,
-          message: `Empty value found for query parameter '${q}'`,
-        };
       }
     }
   }
