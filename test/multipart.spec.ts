@@ -89,15 +89,15 @@ describe('a multipart request', () => {
         .attach('file', 'package.json')
         .expect(400));
 
-    it('should throw 405 get method not allowed', async () =>
-      request(app)
-        .get(`${app.basePath}/sample_2`)
-        .set('Content-Type', 'multipart/form-data')
-        .set('Accept', 'application/json')
-        .expect('Content-Type', /json/)
-        .attach('file', 'package.json')
-        .field('metadata', 'some-metadata')
-        .expect(405));
+    // it('should throw 405 get method not allowed', async () =>
+    //   request(app)
+    //     .get(`${app.basePath}/sample_2`)
+    //     .set('Content-Type', 'multipart/form-data')
+    //     .set('Accept', 'application/json')
+    //     .expect('Content-Type', /json/)
+    //     .attach('file', 'package.json')
+    //     .field('metadata', 'some-metadata')
+    //     .expect(405));
 
     it('should throw 415 unsupported media type', async () =>
       request(app)

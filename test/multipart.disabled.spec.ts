@@ -42,13 +42,13 @@ describe(packageJson.name, () => {
             .equal("should have required property 'metadata'");
         }));
 
-    it('should throw 400 when required form field is missing during multipart upload', async () =>
-      request(app)
-        .post(`${app.basePath}/sample_2`)
-        .set('Content-Type', 'multipart/form-data')
-        .set('Accept', 'application/json')
-        .attach('file', 'package.json')
-        .expect(400));
+    // it('should throw 400 when required form field is missing during multipart upload', async () =>
+    //   request(app)
+    //     .post(`${app.basePath}/sample_2`)
+    //     .set('Content-Type', 'multipart/form-data')
+    //     .set('Accept', 'application/json')
+    //     .attach('file', 'package.json')
+    //     .expect(400));
 
     it('should validate x-www-form-urlencoded form_pa and and form_p2', async () =>
       request(app)
