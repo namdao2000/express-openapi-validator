@@ -17,7 +17,7 @@
     "commit": "cz"
   },
   "repository": {
-    "url": "https://github.com/cdimascio/express-openapi-validator"
+    "url": "https://github.com/namdao2000/express-openapi-validator"
   },
   "keywords": [
     "openapi",
@@ -29,7 +29,7 @@
     "middleware",
     "nodejs"
   ],
-  "author": "Carmine DiMascio <cdimascio@gmail.com>",
+  "author": "Carmine DiMascio <cdimascio@gmail.com>, Nam Dao",
   "license": "MIT",
   "dependencies": {
     "@types/multer": "^1.4.6",
